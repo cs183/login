@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:id="@+id/main_layout" android:gravity="bottom">
+        <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:layout_gravity="center_horizontal|top"
+                android:layout_weight="8"
+                android:visibility="visible"
+                android:gravity="bottom"
+                android:id="@+id/netLayout">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/netDetailsView">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/netAddressText"
+                    android:id="@+id/netAddressText" android:layout_gravity="center" android:textSize="18dp"
+                    android:layout_marginBottom="10dp" android:layout_marginTop="10dp" android:layout_weight="0"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="host"
+                    android:id="@+id/hostEditText" android:layout_gravity="center" android:inputType="textUri"
+                    android:width="200dp" style="@android:style/Widget.DeviceDefault.Light.EditText"
+                    android:layout_marginBottom="10dp" android:layout_weight="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/netPortText"
+                    android:id="@+id/textView" android:layout_gravity="center" android:textSize="18dp"
+                    android:layout_marginBottom="10dp" android:layout_weight="0"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/portEditText" android:layout_gravity="center" android:inputType="number"
+                    android:editable="true" android:enabled="true" android:width="100dp" android:visibility="visible"
+                    android:layout_marginBottom="20dp" android:layout_weight="0"/>
+            </LinearLayout>
+        </ScrollView>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_weight="8"
+            android:visibility="visible"
+            android:gravity="bottom"
+            android:id="@+id/btLayout">
+        <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/btDevicesListView" android:layout_weight="1" android:layout_gravity="bottom"
+                android:fastScrollAlwaysVisible="false"/>
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="@string/btScanText"
+                android:id="@+id/btScanButton" style="@android:style/ButtonBar"
+                android:singleLine="false" android:layout_gravity="bottom|right" android:layout_weight="3"/>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/typeLayout"
+            android:measureWithLargestChild="false"
+            android:visibility="visible" android:baselineAligned="false" android:orientation="horizontal"
+            android:layout_weight="0">
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bluetoothConnection"
+                android:id="@+id/btButton" android:layout_gravity="center" android:layout_weight="1"
+                android:singleLine="false" android:longClickable="false" android:enabled="true"
+                android:clickable="true" style="@android:style/ButtonBar" android:focusable="true"/>
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/networkConnectio"
+                android:id="@+id/netButton" android:layout_weight="1" android:layout_margin="0dp"
+                android:singleLine="false" style="@android:style/ButtonBar" android:enabled="true"
+                android:focusable="true" android:clickable="true"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/connectLayout" android:visibility="visible"
+            android:layout_weight="0">
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/connectText"
+                android:id="@+id/connectButton" style="@android:style/ButtonBar" android:focusable="true"
+                android:enabled="true" android:clickable="true"/>
+    </LinearLayout>
+</LinearLayout>
+

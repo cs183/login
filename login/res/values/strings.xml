@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">login</string>
+    <string name="connectText">Подключиться</string>
+    <string name="netMode">Сеть</string>
+    <string name="bluetoothConnection">Bluetooth</string>
+    <string name="networkConnectio">Сеть</string>
+    <string name="connectionType">Соединение</string>
+    <string name="netAddressText">Сетевой адрес устройства</string>
+    <string name="netPortText">Порт устройства</string>
+    <string name="btScanText">Найти доступные устройства</string>
+</resources>
