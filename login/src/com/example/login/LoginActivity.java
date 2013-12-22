@@ -10,6 +10,7 @@ import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.*;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -45,6 +46,7 @@ public class LoginActivity extends Activity {
     private Button btScanButton;
     private ViewGroup btView;
     private ViewGroup netView;
+    private ListView btDeviceListView;
 
     private ConnectionType connectionType = ConnectionType.Bluetooth;
     private EnumSet<ConnectionType> _availableConnections = EnumSet.of(ConnectionType.Net);
@@ -55,18 +57,16 @@ public class LoginActivity extends Activity {
     private final BroadcastReceiver _deviceFoundReceiver = new BroadcastReceiver() {
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
-            // When discovery finds a device
             if (BluetoothDevice.ACTION_FOUND.equals(action)) {
-                // Get the BluetoothDevice object from the Intent
                 BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                 // Add the name and address to an array adapter to show in a ListView
-/*                for(int position = 0; position < _btDevices.getCount(); position++) {
-                    if (_btDevices.getItem(position).getAddress() == device.getAddress()) {
+                for(int position = 0; position < _btDevices.getCount(); position++) {
+                    if (_btDevices.getItem(position).getAddress().equals(device.getAddress())) {
                         // this device already in list
-                        return;
+                       // return;
                     }
                 }
-*/                _btDevices.add(device);
+                _btDevices.add(device);
             }
         }
     };
@@ -139,41 +139,26 @@ public class LoginActivity extends Activity {
         netAddress = (EditText)findViewById(R.id.hostEditText);
         netPort = (EditText)findViewById(R.id.portEditText);
         btScanButton = (Button)findViewById(R.id.btScanButton);
+        btDeviceListView = (ListView)findViewById(R.id.btDevicesListView);
+
         checkBluetoothConnections();
         if (_btDevices == null) {
             _btDevices = new BluetoothDeviceAdapter(this, R.layout.bluetoothdevice);
         }
         setListeners();
-        IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
-        registerReceiver(_deviceFoundReceiver, filter);
+        registerReceiver(_deviceFoundReceiver, new IntentFilter(BluetoothDevice.ACTION_FOUND));
     }
 
     @Override
     public void onDestroy() {
         unregisterReceiver(_deviceFoundReceiver);
+        super.onDestroy();
     }
     @Override
     public void onResume() {
         super.onResume();
-        LinearLayout bt = (LinearLayout)btView;
-        Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
-        LinearLayout.LayoutParams params;
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-            bt.setOrientation(LinearLayout.VERTICAL);
-            params = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            params.weight = 0;
-           // params.gravity = Gravity.BOTTOM;
-            btScanButton.setLayoutParams(params);
-        } else {
-            bt.setOrientation(LinearLayout.HORIZONTAL);
-            params = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-            params.weight = 4;
-          //  params.gravity = Gravity.RIGHT;
-            btScanButton.setLayoutParams(params);
-        }
         setConnectionType(connectionType, false);
+        onConfigurationChanged(getResources().getConfiguration());
     }
 
     @Override
@@ -188,26 +173,57 @@ public class LoginActivity extends Activity {
     @Override
     protected void onSaveInstanceState(Bundle saveState) {
         super.onSaveInstanceState(saveState);
-        private EnumSet<ConnectionType> _availableConnections = EnumSet.of(ConnectionType.Net);
-        private BluetoothAdapter _btAdapter = null;
-        private WifiManager _wifiManager = null;
-        private BluetoothDeviceAdapter _btDevices = null;
-        saveState.putE.putParcelable("_availableConnections", _availableConnections);
         saveState.putInt("connectionType", connectionType.ordinal());
         ((InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE))
             .hideSoftInputFromWindow(((connectionType == ConnectionType.Net)? netView : btView).getWindowToken(), 0);
     }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfiguration) {
+        super.onConfigurationChanged(newConfiguration);
+
+        ((LinearLayout)btView).setOrientation(
+                (newConfiguration.orientation == Configuration.ORIENTATION_PORTRAIT)
+                     ? LinearLayout.VERTICAL
+                     : LinearLayout.HORIZONTAL);
+
+        LinearLayout.LayoutParams params;
+        if (newConfiguration.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            params = (LinearLayout.LayoutParams)btScanButton.getLayoutParams();
+            params.width = LinearLayout.LayoutParams.MATCH_PARENT;
+            params.height = LinearLayout.LayoutParams.WRAP_CONTENT;
+            params.weight = 0;
+            btScanButton.setLayoutParams(params);
+            params = (LinearLayout.LayoutParams)btDeviceListView.getLayoutParams();
+            params.width = LinearLayout.LayoutParams.MATCH_PARENT;
+            params.height = LinearLayout.LayoutParams.MATCH_PARENT;
+            params.weight = 1;
+            btDeviceListView.setLayoutParams(params);
+        } else {
+            params = (LinearLayout.LayoutParams)btScanButton.getLayoutParams();
+            params.width = 0;
+            params.height = LinearLayout.LayoutParams.MATCH_PARENT;
+            params.weight = 2;
+            btScanButton.setLayoutParams(params);
+            params = (LinearLayout.LayoutParams)btDeviceListView.getLayoutParams();
+            params.width = 0;
+            params.height = LinearLayout.LayoutParams.MATCH_PARENT;
+            params.weight = 6;
+            btDeviceListView.setLayoutParams(params);
+        }
+    }
+
     private void setConnectionType(ConnectionType connection, boolean animate) {
         connectionType = connection;
-        netButton.setSelected(connection == ConnectionType.Net);
-        netButton.setEnabled(connection != ConnectionType.Net);
-        btButton.setSelected(connection == ConnectionType.Bluetooth);
-        btButton.setEnabled(connection != ConnectionType.Bluetooth);
-        View removeView = (connection == ConnectionType.Bluetooth)? netView : btView;
+        boolean netConnection = (connection == ConnectionType.Net);
+        netButton.setSelected(netConnection);
+        netButton.setEnabled(!netConnection);
+        btButton.setSelected(!netConnection);
+        btButton.setEnabled(netConnection);
+        View removeView = (netConnection)? btView : netView;
+        View showView = (netConnection)? netView : btView;
         ((InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE))
                 .hideSoftInputFromWindow(removeView.getWindowToken(), 0);
-        View showView = (connection == ConnectionType.Bluetooth)? btView : netView;
         Animation removeAnimation = AnimationUtils.loadAnimation(this, R.anim.hiderotation);
         Animation showAnimation = AnimationUtils.loadAnimation(this, R.anim.showrotation);
         removeView.setVisibility(View.GONE);
