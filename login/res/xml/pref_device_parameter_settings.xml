@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/prefParameterSettings_1" android:key="parameterSetting_1">
+        <EditTextPreference
+                android:key="parameter_1_title"
+                android:title="@string/prefParameterNameFieldTitle"
+                android:summary="@string/prefParameterNameFieldSummary" />
+        <EditTextPreference
+                android:key="parameter_1_min"
+                android:title="@string/prefParameterMinFieldTitle"
+                android:summary="@string/prefParameterMinFieldSummary"
+                android:inputType="numberDecimal"/>
+        <EditTextPreference
+                android:key="parameter_1_max"
+                android:title="@string/prefParameterMaxFieldTitle"
+                android:summary="@string/prefParameterMaxFieldSummary"
+                android:inputType="numberDecimal"/>
+        <EditTextPreference
+                android:key="parameter_1_default"
+                android:title="@string/prefParameterDefaultFieldTitle"
+                android:summary="@string/prefParameterDefaultFieldSummary"
+                android:inputType="numberDecimal"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefParameterSettings_2" android:key="parameterSetting_2">
+        <EditTextPreference
+                android:key="parameter_2_title"
+                android:title="@string/prefParameterNameFieldTitle"
+                android:summary="@string/prefParameterNameFieldSummary" />
+        <EditTextPreference
+                android:key="parameter_2_min"
+                android:title="@string/prefParameterMinFieldTitle"
+                android:summary="@string/prefParameterMinFieldSummary"
+                android:inputType="numberDecimal"/>
+        <EditTextPreference
+                android:key="parameter_2_max"
+                android:title="@string/prefParameterMaxFieldTitle"
+                android:summary="@string/prefParameterMaxFieldSummary"
+                android:inputType="numberDecimal"/>
+        <EditTextPreference
+                android:key="parameter_2_default"
+                android:title="@string/prefParameterDefaultFieldTitle"
+                android:summary="@string/prefParameterDefaultFieldSummary"
+                android:inputType="numberDecimal"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefParameterSettings_3" android:key="parameterSetting_3">
+        <EditTextPreference
+                android:key="parameter_3_title"
+                android:title="@string/prefParameterNameFieldTitle"
+                android:summary="@string/prefParameterNameFieldSummary" />
+        <EditTextPreference
+                android:key="parameter_3_min"
+                android:title="@string/prefParameterMinFieldTitle"
+                android:summary="@string/prefParameterMinFieldSummary"
+                android:inputType="numberDecimal"/>
+        <EditTextPreference
+                android:key="parameter_3_max"
+                android:title="@string/prefParameterMaxFieldTitle"
+                android:summary="@string/prefParameterMaxFieldSummary"
+                android:inputType="numberDecimal"/>
+        <EditTextPreference
+                android:key="parameter_3_default"
+                android:title="@string/prefParameterDefaultFieldTitle"
+                android:summary="@string/prefParameterDefaultFieldSummary"
+                android:inputType="numberDecimal"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefParameterSettings_4" android:key="parameterSetting_4">
+        <EditTextPreference
+                android:key="parameter_4_title"
+                android:title="@string/prefParameterNameFieldTitle"
+                android:summary="@string/prefParameterNameFieldSummary" />
+        <EditTextPreference
+                android:key="parameter_4_min"
+                android:title="@string/prefParameterMinFieldTitle"
+                android:summary="@string/prefParameterMinFieldSummary"
+                android:inputType="numberDecimal"/>
+        <EditTextPreference
+                android:key="parameter_4_max"
+                android:title="@string/prefParameterMaxFieldTitle"
+                android:summary="@string/prefParameterMaxFieldSummary"
+                android:inputType="numberDecimal"/>
+        <EditTextPreference
+                android:key="parameter_4_default"
+                android:title="@string/prefParameterDefaultFieldTitle"
+                android:summary="@string/prefParameterDefaultFieldSummary"
+                android:inputType="numberDecimal"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefParameterSettings_5" android:key="parameterSetting_5">
+        <EditTextPreference
+                android:key="parameter_5_title"
+                android:title="@string/prefParameterNameFieldTitle"
+                android:summary="@string/prefParameterNameFieldSummary" />
+        <EditTextPreference
+                android:key="parameter_5_min"
+                android:title="@string/prefParameterMinFieldTitle"
+                android:summary="@string/prefParameterMinFieldSummary"
+                android:inputType="numberDecimal"/>
+        <EditTextPreference
+                android:key="parameter_5_max"
+                android:title="@string/prefParameterMaxFieldTitle"
+                android:summary="@string/prefParameterMaxFieldSummary"
+                android:inputType="numberDecimal"/>
+        <EditTextPreference
+                android:key="parameter_5_default"
+                android:title="@string/prefParameterDefaultFieldTitle"
+                android:summary="@string/prefParameterDefaultFieldSummary"
+                android:inputType="numberDecimal"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefParameterSettings_6" android:key="parameterSetting_6">
+        <EditTextPreference
+                android:key="parameter_6_title"
+                android:title="@string/prefParameterNameFieldTitle"
+                android:summary="@string/prefParameterNameFieldSummary" />
+        <EditTextPreference
+                android:key="parameter_6_min"
+                android:title="@string/prefParameterMinFieldTitle"
+                android:summary="@string/prefParameterMinFieldSummary"
+                android:inputType="numberDecimal"/>
+        <EditTextPreference
+                android:key="parameter_6_max"
+                android:title="@string/prefParameterMaxFieldTitle"
+                android:summary="@string/prefParameterMaxFieldSummary"
+                android:inputType="numberDecimal"/>
+        <EditTextPreference
+                android:key="parameter_6_default"
+                android:title="@string/prefParameterDefaultFieldTitle"
+                android:summary="@string/prefParameterDefaultFieldSummary"
+                android:inputType="numberDecimal"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefParameterSettings_7" android:key="parameterSetting_7">
+        <EditTextPreference
+                android:key="parameter_7_title"
+                android:title="@string/prefParameterNameFieldTitle"
+                android:summary="@string/prefParameterNameFieldSummary" />
+        <EditTextPreference
+                android:key="parameter_7_min"
+                android:title="@string/prefParameterMinFieldTitle"
+                android:summary="@string/prefParameterMinFieldSummary"
+                android:inputType="numberDecimal"/>
+        <EditTextPreference
+                android:key="parameter_7_max"
+                android:title="@string/prefParameterMaxFieldTitle"
+                android:summary="@string/prefParameterMaxFieldSummary"
+                android:inputType="numberDecimal"/>
+        <EditTextPreference
+                android:key="parameter_7_default"
+                android:title="@string/prefParameterDefaultFieldTitle"
+                android:summary="@string/prefParameterDefaultFieldSummary"
+                android:inputType="numberDecimal"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefParameterSettings_8" android:key="parameterSetting_8">
+        <EditTextPreference
+                android:key="parameter_8_title"
+                android:title="@string/prefParameterNameFieldTitle"
+                android:summary="@string/prefParameterNameFieldSummary" />
+        <EditTextPreference
+                android:key="parameter_8_min"
+                android:title="@string/prefParameterMinFieldTitle"
+                android:summary="@string/prefParameterMinFieldSummary"
+                android:inputType="numberDecimal"/>
+        <EditTextPreference
+                android:key="parameter_8_max"
+                android:title="@string/prefParameterMaxFieldTitle"
+                android:summary="@string/prefParameterMaxFieldSummary"
+                android:inputType="numberDecimal"/>
+        <EditTextPreference
+                android:key="parameter_8_default"
+                android:title="@string/prefParameterDefaultFieldTitle"
+                android:summary="@string/prefParameterDefaultFieldSummary"
+                android:inputType="numberDecimal"/>
+    </PreferenceCategory>
+</PreferenceScreen>

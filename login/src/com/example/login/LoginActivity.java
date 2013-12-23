@@ -252,4 +252,11 @@ public class LoginActivity extends Activity {
                 // draw available connection types (if changed)
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menu.add(Menu.NONE, 1, 0, "Настройки").setIntent(new Intent(this, Preferences.class));
+        return super.onCreateOptionsMenu(menu);
+    }
+
 }

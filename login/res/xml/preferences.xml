@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:key="DeviceParams" android:title="Параметры">
+        <PreferenceCategory android:key="1" android:title="Параметр 1" >
+
+        </PreferenceCategory>
+    </PreferenceCategory>
+</PreferenceScreen>
