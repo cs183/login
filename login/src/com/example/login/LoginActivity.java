@@ -48,59 +48,11 @@ public class LoginActivity extends Activity {
     private ViewGroup netView;
     private ListView btDeviceListView;
 
-    private ConnectionType connectionType = ConnectionType.Bluetooth;
+    private ConnectionType _connectionType = ConnectionType.Bluetooth;
     private EnumSet<ConnectionType> _availableConnections = EnumSet.of(ConnectionType.Net);
     private BluetoothAdapter _btAdapter = null;
     private WifiManager _wifiManager = null;
     private BluetoothDeviceAdapter _btDevices = null;
-
-    private final BroadcastReceiver _deviceFoundReceiver = new BroadcastReceiver() {
-        public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
-            if (BluetoothDevice.ACTION_FOUND.equals(action)) {
-                BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-                // Add the name and address to an array adapter to show in a ListView
-                for(int position = 0; position < _btDevices.getCount(); position++) {
-                    if (_btDevices.getItem(position).getAddress().equals(device.getAddress())) {
-                        // this device already in list
-                       // return;
-                    }
-                }
-                _btDevices.add(device);
-            }
-        }
-    };
-
-
-    private View.OnClickListener scanDevicesListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            _btAdapter.startDiscovery();
-        }
-    };
-
-
-    private View.OnClickListener connectionTypeListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            switch (v.getId()) {
-                case R.id.btButton:
-                    setConnectionType(ConnectionType.Bluetooth, true);
-                    break;
-                case R.id.netButton:
-                    setConnectionType(ConnectionType.Net, true);
-                    break;
-                default:
-                    throw new IllegalArgumentException("Wrong connection type");
-            }
-        }
-    };
-
-    private View.OnClickListener connectButtonListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-        }
-    };
 
     private void checkBluetoothConnections() {
         btScanButton.setEnabled(false);
@@ -151,13 +103,16 @@ public class LoginActivity extends Activity {
 
     @Override
     public void onDestroy() {
+        if (_btAdapter != null) {
+            _btAdapter.cancelDiscovery();
+        }
         unregisterReceiver(_deviceFoundReceiver);
         super.onDestroy();
     }
     @Override
     public void onResume() {
         super.onResume();
-        setConnectionType(connectionType, false);
+        setConnectionType(_connectionType, false);
         onConfigurationChanged(getResources().getConfiguration());
     }
 
@@ -165,7 +120,7 @@ public class LoginActivity extends Activity {
     protected void onRestoreInstanceState(Bundle savedState) {
         int ct = savedState.getInt("connectionType", -1);
         if (ct >= 0) {
-            connectionType = ConnectionType.values()[ct];
+            _connectionType = ConnectionType.values()[ct];
         }
         super.onRestoreInstanceState(savedState);
     }
@@ -173,22 +128,19 @@ public class LoginActivity extends Activity {
     @Override
     protected void onSaveInstanceState(Bundle saveState) {
         super.onSaveInstanceState(saveState);
-        saveState.putInt("connectionType", connectionType.ordinal());
+        saveState.putInt("connectionType", _connectionType.ordinal());
         ((InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE))
-            .hideSoftInputFromWindow(((connectionType == ConnectionType.Net)? netView : btView).getWindowToken(), 0);
+            .hideSoftInputFromWindow(((_connectionType == ConnectionType.Net)? netView : btView).getWindowToken(), 0);
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfiguration) {
         super.onConfigurationChanged(newConfiguration);
 
-        ((LinearLayout)btView).setOrientation(
-                (newConfiguration.orientation == Configuration.ORIENTATION_PORTRAIT)
-                     ? LinearLayout.VERTICAL
-                     : LinearLayout.HORIZONTAL);
 
         LinearLayout.LayoutParams params;
         if (newConfiguration.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            ((LinearLayout)btView).setOrientation(LinearLayout.VERTICAL);
             params = (LinearLayout.LayoutParams)btScanButton.getLayoutParams();
             params.width = LinearLayout.LayoutParams.MATCH_PARENT;
             params.height = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -200,6 +152,7 @@ public class LoginActivity extends Activity {
             params.weight = 1;
             btDeviceListView.setLayoutParams(params);
         } else {
+            ((LinearLayout)btView).setOrientation(LinearLayout.HORIZONTAL);
             params = (LinearLayout.LayoutParams)btScanButton.getLayoutParams();
             params.width = 0;
             params.height = LinearLayout.LayoutParams.MATCH_PARENT;
@@ -214,7 +167,7 @@ public class LoginActivity extends Activity {
     }
 
     private void setConnectionType(ConnectionType connection, boolean animate) {
-        connectionType = connection;
+        _connectionType = connection;
         boolean netConnection = (connection == ConnectionType.Net);
         netButton.setSelected(netConnection);
         netButton.setEnabled(!netConnection);
@@ -234,12 +187,66 @@ public class LoginActivity extends Activity {
         }
     }
 
+    // Listeners
     private void setListeners() {
         netButton.setOnClickListener(connectionTypeListener);
         btButton.setOnClickListener(connectionTypeListener);
         connectButton.setOnClickListener(connectButtonListener);
         btScanButton.setOnClickListener(scanDevicesListener);
     }
+
+    private final BroadcastReceiver _deviceFoundReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (BluetoothDevice.ACTION_FOUND.equals(action)) {
+                BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+                // Add the name and address to an array adapter to show in a ListView
+                for(int position = 0; position < _btDevices.getCount(); position++) {
+                    if (_btDevices.getItem(position).getAddress().equals(device.getAddress())) {
+                        // this device already in list
+                        // return;
+                    }
+                }
+                _btDevices.add(device);
+            }
+        }
+    };
+
+
+    private View.OnClickListener scanDevicesListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            _btAdapter.startDiscovery();
+        }
+    };
+
+
+    private View.OnClickListener connectionTypeListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.btButton:
+                    setConnectionType(ConnectionType.Bluetooth, true);
+                    break;
+                case R.id.netButton:
+                    setConnectionType(ConnectionType.Net, true);
+                    break;
+                default:
+                    throw new IllegalArgumentException("Wrong connection type");
+            }
+        }
+    };
+
+    private View.OnClickListener connectButtonListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if (_btAdapter != null) {
+                _btAdapter.cancelDiscovery();
+            }
+        }
+    };
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
