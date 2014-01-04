@@ -26,10 +26,10 @@ public class BluetoothDeviceAdapter extends ArrayAdapter<BluetoothDevice> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = (View)convertView;
+        View view = convertView;
         if (view == null) {
             LayoutInflater inflater = _context.getLayoutInflater();
-            view = (View)inflater.inflate(R.layout.bluetoothdevice, null);
+            view = inflater.inflate(R.layout.bluetoothdevice, null);
         }
 
         BluetoothDevice item = getItem(position);

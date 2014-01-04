@@ -8,7 +8,7 @@
     <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" android:layout_gravity="center_horizontal"
-                android:visibility="visible"
+                android:visibility="gone"
                 android:gravity="bottom"
                 android:id="@+id/netLayout" android:fillViewport="false" android:layout_weight="1">
             <LinearLayout
@@ -49,13 +49,15 @@
             android:layout_height="fill_parent"
             android:layout_width="match_parent"
             android:layout_gravity="center_horizontal"
-            android:visibility="gone"
+            android:visibility="visible"
             android:id="@+id/btLayout" android:gravity="bottom" android:layout_weight="1">
         <ListView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/btDevicesListView" android:layout_gravity="left"
-                android:fastScrollAlwaysVisible="false" android:layout_weight="1"/>
+                android:fastScrollAlwaysVisible="false" android:layout_weight="1"
+                android:choiceMode="singleChoice"
+                android:longClickable="false" android:clickable="false" android:drawSelectorOnTop="true"/>
         <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
