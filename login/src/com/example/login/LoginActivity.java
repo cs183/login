@@ -3,49 +3,26 @@ package com.example.login;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothSocket;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.*;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.net.InetSocketAddress;
 import java.util.EnumSet;
-import java.util.UUID;
 
 public class LoginActivity extends Activity {
-    public enum ConnectionType {
-        None(0),
-        Net(1),
-        Bluetooth(2);
-
-        private final long _connectionTypeValue;
-
-        ConnectionType(long connectionTypeValue) {
-            _connectionTypeValue = connectionTypeValue;
-        }
-
-        public long getConnectionTypeValue() {
-            return _connectionTypeValue;
-        }
-    }
 
     static final int REQUEST_ENABLE_BT_ID = 1;
-    static final UUID SERVICE_UUID = UUID.fromString("DA6051A8-A56C-4304-8271-6F43379F4844");
 
-    private EditText netAddress;
-    private EditText netPort;
+    private EditText _netAddress;
+    private EditText _netPort;
     private Button netButton;
     private Button btButton;
     private Button connectButton;
@@ -57,7 +34,7 @@ public class LoginActivity extends Activity {
     private ConnectionType _connectionType = ConnectionType.Bluetooth;
     private EnumSet<ConnectionType> _availableConnections = EnumSet.of(ConnectionType.Net);
     private BluetoothAdapter _btAdapter = null;
-    private WifiManager _wifiManager = null;
+//    private WifiManager _wifiManager = null;
     private BluetoothDeviceAdapter _btDevices = null;
 
     private void checkBluetoothConnections() {
@@ -82,9 +59,6 @@ public class LoginActivity extends Activity {
         btScanButton.setEnabled(true);
     }
 
-    /**
-     * Called when the activity is first created.
-     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,10 +68,11 @@ public class LoginActivity extends Activity {
         connectButton = Button.class.cast(findViewById(R.id.connectButton));
         btView = (ViewGroup)findViewById(R.id.btLayout);
         netView = (ViewGroup)findViewById(R.id.netLayout);
-        netAddress = (EditText)findViewById(R.id.hostEditText);
-        netPort = (EditText)findViewById(R.id.portEditText);
+        _netAddress = (EditText)findViewById(R.id.hostEditText);
+        _netPort = (EditText)findViewById(R.id.portEditText);
         btScanButton = (Button)findViewById(R.id.btScanButton);
         btDeviceListView = (ListView)findViewById(R.id.btDevicesListView);
+        btDeviceListView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
         checkBluetoothConnections();
         if (_btDevices == null) {
@@ -115,33 +90,12 @@ public class LoginActivity extends Activity {
         unregisterReceiver(_deviceFoundReceiver);
         super.onDestroy();
     }
+
     @Override
     public void onResume() {
         super.onResume();
         setConnectionType(_connectionType, false);
         onConfigurationChanged(getResources().getConfiguration());
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedState) {
-        int ct = savedState.getInt("connectionType", -1);
-        if (ct >= 0) {
-            _connectionType = ConnectionType.values()[ct];
-        }
-        int checkedDevice = savedState.getInt("checkedDevicePosition", -1);
-        if (checkedDevice >= 0 && checkedDevice < btDeviceListView.getCount()) {
-            btDeviceListView.setItemChecked(checkedDevice, true);
-        }
-        super.onRestoreInstanceState(savedState);
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle saveState) {
-        super.onSaveInstanceState(saveState);
-        saveState.putInt("connectionType", _connectionType.ordinal());
-        ((InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE))
-            .hideSoftInputFromWindow(((_connectionType == ConnectionType.Net)? netView : btView).getWindowToken(), 0);
-        saveState.putInt("checkedDevicePosition", btDeviceListView.getCheckedItemPosition());
     }
 
     @Override
@@ -233,7 +187,7 @@ public class LoginActivity extends Activity {
     private AdapterView.OnItemClickListener btDeviceSelectListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            btDeviceListView.setSelection(position);
+            btDeviceListView.setItemChecked(position, true);
 //            view.setSelected(true);
         }
     };
@@ -267,47 +221,52 @@ public class LoginActivity extends Activity {
             if (_btAdapter != null) {
                 _btAdapter.cancelDiscovery();
             }
-            if (btDeviceListView.getCount() > 0) {
-                BluetoothDevice d = (BluetoothDevice)btDeviceListView.getAdapter().getItem(0);
-                connectBtDevice(d);
+            switch (_connectionType) {
+                case Net:
+                    InetSocketAddress deviceAddress;
+                    try {
+                        String hostName = _netAddress.getText().toString();
+                        Integer port = Integer.valueOf(_netPort.getText().toString());
+                        deviceAddress = new InetSocketAddress(hostName, port);
+                    } catch (Exception e) {
+                        Toast.makeText(getApplicationContext(), "Ошибка при разборе адреса", Toast.LENGTH_LONG)
+                                .show();
+                        return;
+                    }
+                    (new DeviceConnectionTask(LoginActivity.this)).execute(deviceAddress);
+                    break;
+                case Bluetooth:
+                    if (btDeviceListView.getCount() <= 0) {
+                        Toast.makeText(getApplicationContext(), "Нет доступных устройств для подключения", Toast.LENGTH_LONG)
+                                .show();
+                        return;
+                    }
+                    int itemPosition = btDeviceListView.getCheckedItemPosition();
+                    if (itemPosition < 0) {
+                        Toast.makeText(getApplicationContext(), "Не выбрано устройство для подключения", Toast.LENGTH_LONG)
+                                .show();
+                        return;
+                    }
+                    BluetoothDevice device = (BluetoothDevice)btDeviceListView.getItemAtPosition(itemPosition);
+                    (new DeviceConnectionTask(LoginActivity.this)).execute(device);
+                    break;
+                default:
+                    Toast.makeText(getApplicationContext(), "Хмммм... Тип соединения неопределен", Toast.LENGTH_LONG).show();
+                    return;
             }
         }
     };
-
-    private void sendGetParams() {
-
-    }
-
-    private void connectBtDevice(BluetoothDevice device) {
-        _btAdapter.cancelDiscovery();
-        try {
-            final BluetoothSocket socket = device.createRfcommSocketToServiceRecord(SERVICE_UUID);
-            Thread t = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        socket.connect();
-                        OutputStream out = socket.getOutputStream();
-                        byte cmd[];
-                        cmd = new byte[]{(byte)0xAA, (byte)0x02, 0, 0,0,0};
-                        out.write(cmd);
-                        socket.close();
-                    } catch (IOException e) {
-                        throw new IllegalArgumentException("Error while connecting to BT socket");
-                    }
-                }
-            });
-            t.start();
-        } catch(IOException eIo) {
-            throw new IllegalArgumentException("Unable create BT socket for selected device.");
-        }
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
             case REQUEST_ENABLE_BT_ID:
                 if (resultCode == RESULT_OK) {
+                    if (_btDevices == null) {
+                        _btDevices = new BluetoothDeviceAdapter(this, R.layout.bluetoothdevice);
+                        _btDevices.addAll(_btAdapter.getBondedDevices());
+                        ((ListView)btView.findViewById(R.id.btDevicesListView)).setAdapter(_btDevices);
+                    }
                     _availableConnections.add(ConnectionType.Bluetooth);
                 }
                 btScanButton.setEnabled(resultCode == RESULT_OK);

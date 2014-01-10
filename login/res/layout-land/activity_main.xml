@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity" >
+    <RelativeLayout
+        android:id="@+id/graphicsButtonsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:layout_alignParentRight="true" >
+        
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/stop"
+            />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/stopButton"
+            android:background="@drawable/play" />
+
+        <Button
+            android:id="@+id/settingsButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_above="@id/stopButton"
+            android:background="@drawable/settings"/>
+        <!-- TODO change button's background -->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="60dp"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    
+
+</RelativeLayout>
