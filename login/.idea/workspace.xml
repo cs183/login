@@ -28,19 +28,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/login/BtDeviceConnectionImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/login/CommandData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/login/ConnectionType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/login/DeviceConnection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/login/DeviceConnectionTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/login/NetDeviceConnectionImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/login/SensorDevice.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/login/ThreadLocalVariablesKeeper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/achartengine_1_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/login/LoginActivity.java" afterPath="$PROJECT_DIR$/src/com/example/login/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.iml" afterPath="$PROJECT_DIR$/login.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/pref_device_parameter_settings.xml" afterPath="$PROJECT_DIR$/res/xml/pref_device_parameter_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/pref_headers.xml" afterPath="$PROJECT_DIR$/res/xml/pref_headers.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
     </list>
     <ignored path="login.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,7 +39,7 @@
     <file path="/Dummy.txt" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1389292388259" ignored="false" />
     <file path="/hiderotation.xml" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1384973636206" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1385575094019" ignored="false" />
-    <file path="/strings.xml" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1385289417482" ignored="false" />
+    <file path="/strings.xml" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1389439940854" ignored="false" />
     <file path="/BluetoothDeviceAdapter.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1385400093410" ignored="false" />
     <file path="/fragment.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1388754900501" ignored="false" />
     <file path="/bluetoothdevice.xml" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1385308340520" ignored="false" />
@@ -66,6 +56,8 @@
     <file path="/CommandData.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1389167441880" ignored="false" />
     <file path="/SensorValueChart.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1389177607795" ignored="false" />
     <file path="/GraphicsActivity.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1389193091563" ignored="false" />
+    <file path="/pref_device_parameter_settings.xml" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1389441170898" ignored="false" />
+    <file path="/pref_headers.xml" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1389440897559" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +153,52 @@
       <file leaf-file-name="LoginActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/login/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="26" vertical-scroll-proportion="0.0">
+            <state line="94" column="0" selection-start="3574" selection-end="3574" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="method#checkBluetoothConnections#0;class#LoginActivity#0" expanded="false" />
+                <element signature="method#onCreate#0;class#LoginActivity#0" expanded="false" />
+                <element signature="method#onDestroy#0;class#LoginActivity#0" expanded="false" />
+                <element signature="method#onResume#0;class#LoginActivity#0" expanded="false" />
+                <element signature="method#onConfigurationChanged#0;class#LoginActivity#0" expanded="false" />
+                <element signature="method#setConnectionType#0;class#LoginActivity#0" expanded="false" />
+                <element signature="method#setListeners#0;class#LoginActivity#0" expanded="false" />
+                <element signature="method#onActivityResult#0;class#LoginActivity#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Preferences.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/login/Preferences.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="13" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pref_device_parameter_settings.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/xml/pref_device_parameter_settings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="24" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.728">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="36" selection-start="2985" selection-end="2985" vertical-scroll-proportion="-12.96">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pref_headers.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/xml/pref_headers.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="65" selection-start="566" selection-end="566" vertical-scroll-proportion="-6.12">
               <folding />
             </state>
           </provider>
@@ -181,24 +218,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SensorValueChart.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SensorValueChart.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/login/chart/SensorValueChart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="8" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.33333334">
+            <state line="37" column="8" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getYScaleCoef#0;class#SensorValueChart#0" expanded="false" />
                 <element signature="method#getXScaleCoef#0;class#SensorValueChart#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeviceConnection.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/login/DeviceConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="19" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -230,15 +258,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThreadLocalVariablesKeeper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/login/ThreadLocalVariablesKeeper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -258,9 +277,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/example/login/BtDeviceConnectionImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/example/login/DeviceConnection.java" />
-        <option value="$PROJECT_DIR$/src/com/example/login/ConnectionType.java" />
         <option value="$PROJECT_DIR$/src/com/example/login/NetDeviceConnectionImpl.java" />
         <option value="$PROJECT_DIR$/src/com/example/login/LoginActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/login/CommandData.java" />
@@ -274,6 +290,9 @@
         <option value="$PROJECT_DIR$/src/com/example/login/DeviceConnectionTask.java" />
         <option value="$PROJECT_DIR$/src/com/example/login/GraphicsActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/login/SensorDevice.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/xml/pref_headers.xml" />
+        <option value="$PROJECT_DIR$/res/xml/pref_device_parameter_settings.xml" />
       </list>
     </option>
   </component>
@@ -369,6 +388,28 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -385,6 +426,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="layout-port" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -620,7 +675,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39811066" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39811066" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -634,8 +689,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2125" sideWeight="0.6018893" order="0" side_tool="true" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39676112" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2125" sideWeight="0.6032389" order="0" side_tool="true" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39676112" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26180556" sideWeight="0.6720648" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -712,38 +767,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/drawable/selected_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="34" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files (x86)/Android/android-sdk/sources/android-15/android/widget/ListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1798" column="0" selection-start="68781" selection-end="68781" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/bluetoothdevice.xml">
-      <provider editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" />
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/login/CommandData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="18" selection-start="3100" selection-end="3100" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="method#decodeCommand#0;class#CommandData#0" expanded="false" />
-            <element signature="method#encodeCommand#0;class#CommandData#0" expanded="false" />
-            <element signature="method#setParametersToDevice#0;class#CommandData#0" expanded="false" />
-            <element signature="method#getParametersFromDevice#0;class#CommandData#0" expanded="false" />
-            <element signature="method#getDataToDevice#0;class#CommandData#0" expanded="false" />
-            <element signature="method#calculateCrc#0;class#CommandData#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/login/DeviceConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="19" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
@@ -762,13 +785,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/example/login/chart/AbstractDemoChart.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="61" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/login/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="26" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout-land/activity_main.xml">
@@ -828,12 +844,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/login/chart/SensorValueChart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="8" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.33333334">
+        <state line="37" column="8" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getYScaleCoef#0;class#SensorValueChart#0" expanded="false" />
             <element signature="method#getXScaleCoef#0;class#SensorValueChart#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/login/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="0" selection-start="3574" selection-end="3574" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#checkBluetoothConnections#0;class#LoginActivity#0" expanded="false" />
+            <element signature="method#onCreate#0;class#LoginActivity#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#LoginActivity#0" expanded="false" />
+            <element signature="method#onResume#0;class#LoginActivity#0" expanded="false" />
+            <element signature="method#onConfigurationChanged#0;class#LoginActivity#0" expanded="false" />
+            <element signature="method#setConnectionType#0;class#LoginActivity#0" expanded="false" />
+            <element signature="method#setListeners#0;class#LoginActivity#0" expanded="false" />
+            <element signature="method#onActivityResult#0;class#LoginActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="36" selection-start="2985" selection-end="2985" vertical-scroll-proportion="-12.96">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/login/Preferences.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/xml/pref_headers.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="65" selection-start="566" selection-end="566" vertical-scroll-proportion="-6.12">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/xml/pref_device_parameter_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="24" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.728">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -33,4 +33,17 @@
     <string name="prefParameterMaxFieldSummary">Максимальное значение параметра</string>
     <string name="prefParameterDefaultFieldTitle">По умолчанию</string>
     <string name="prefParameterDefaultFieldSummary">Значение параметра по умолчанию</string>
+    <string name="prefFlagSettings">Настройки флагов устр-ва</string>
+    <string name="prefFlagNameFieldTitle">Наименование</string>
+    <string name="preFlagNameFieldSummary">Наименование флага</string>
+    <string name="prefFlagDefaultFieldTitle">Значение</string>
+    <string name="prefFlagDefaultFieldSummary">Заначение по умолчанию</string>
+    <string name="prefFlagSettings_1">Флаг 1</string>
+    <string name="prefFlagSettings_2">Флаг 2</string>
+    <string name="prefFlagSettings_3">Флаг 3</string>
+    <string name="prefFlagSettings_4">Флаг 4</string>
+    <string name="prefFlagSettings_5">Флаг 5</string>
+    <string name="prefFlagSettings_6">Флаг 6</string>
+    <string name="prefFlagSettings_7">Флаг 7</string>
+    <string name="prefFlagSettings_8">Флаг 8</string>
 </resources>

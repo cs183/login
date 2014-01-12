@@ -7,7 +7,7 @@
     <header
             android:fragment="com.example.login.DeviceParametersActivity"
             android:title="@string/prefDeviceParametersTitle"
-            android:summary="@string/prefDeviceParametersSummary"/>
+            android:summary="@string/prefDeviceParametersSummary" />
  <!--
     <header
             android:fragment="com.example.login.PrefGraphicParameters"
