@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceFragment
+    <PreferenceScreen
         android:key="parameter_1"
         android:title="@string/prefParameterSettings_1"
         android:summary="Настройки первого параметра">
@@ -24,7 +24,7 @@
                 android:title="@string/prefParameterDefaultFieldTitle"
                 android:summary="@string/prefParameterDefaultFieldSummary"
                 android:inputType="numberDecimal"/>
-    </PreferenceFragment>
+    </PreferenceScreen>
     <PreferenceScreen
             android:key="parameter_2"
             android:title="@string/prefParameterSettings_2"
@@ -76,7 +76,7 @@
     <PreferenceScreen
             android:key="parameter_4"
             android:title="@string/prefParameterSettings_4"
-            android:summary="Настройки первого параметра">
+            android:summary="Настройки четвертого параметра">
         <EditTextPreference
                 android:key="parameter_4_title"
                 android:title="@string/prefParameterNameFieldTitle"
@@ -100,7 +100,7 @@
     <PreferenceScreen
             android:key="parameter_5"
             android:title="@string/prefParameterSettings_5"
-            android:summary="Настройки первого параметра">
+            android:summary="Настройки пятого параметра">
         <EditTextPreference
                 android:key="parameter_5_title"
                 android:title="@string/prefParameterNameFieldTitle"
@@ -124,7 +124,7 @@
     <PreferenceScreen
             android:key="parameter_6"
             android:title="@string/prefParameterSettings_6"
-            android:summary="Настройки первого параметра">
+            android:summary="Настройки шестого параметра">
         <EditTextPreference
                 android:key="parameter_6_title"
                 android:title="@string/prefParameterNameFieldTitle"
@@ -148,7 +148,7 @@
     <PreferenceScreen
             android:key="parameter_7"
             android:title="@string/prefParameterSettings_7"
-            android:summary="Настройки первого параметра">
+            android:summary="Настройки седьмого параметра">
         <EditTextPreference
                 android:key="parameter_7_title"
                 android:title="@string/prefParameterNameFieldTitle"
@@ -172,7 +172,7 @@
     <PreferenceScreen
             android:key="parameter_7"
             android:title="@string/prefParameterSettings_7"
-            android:summary="Настройки первого параметра">
+            android:summary="Настройки восьмого параметра">
         <EditTextPreference
                 android:key="parameter_8_title"
                 android:title="@string/prefParameterNameFieldTitle"
