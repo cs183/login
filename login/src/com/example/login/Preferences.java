@@ -14,7 +14,5 @@ import java.util.List;
 public class Preferences extends PreferenceActivity {
     public void onBuildHeaders(List<Header> target) {
         loadHeadersFromResource(R.xml.pref_headers,  target);
-        target.get(1).summary = "gg";
-        this.
     }
 }
