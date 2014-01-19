@@ -28,22 +28,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/login/PrefParameterSetting.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/xml/pref_parameter_setting.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/login/Preferences.java" afterPath="$PROJECT_DIR$/src/com/example/login/Preferences.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/pref_device_parameter_settings.xml" afterPath="$PROJECT_DIR$/res/xml/pref_device_parameter_settings.xml" />
+      <change type="DELETED" beforePath="C:\Work\Efko\Sensor\login\res\xml\pref_device_parameter_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Efko\Sensor\login\res\xml\pref_headers.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Efko\Sensor\login\res\xml\pref_parameter_setting.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Efko\Sensor\login\res\xml\preferences.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Efko\Sensor\login\src\com\example\login\PrefDeviceParameterSettings.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Work\Efko\Sensor\login\src\com\example\login\PrefParameterSetting.java" afterPath="$PROJECT_DIR$/src/com/example/login/PrefParameterFragment.java" />
+      <change type="MOVED" beforePath="C:\Work\Efko\Sensor\login\src\com\example\login\Preferences.java" afterPath="$PROJECT_DIR$/src/com/example/login/PrefParameterSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/login/LoginActivity.java" afterPath="$PROJECT_DIR$/src/com/example/login/LoginActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="login.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/login.xml" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1387638050135" ignored="false" />
-    <file path="/LoginActivity.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1389108053984" ignored="false" />
-    <file path="/Dummy.txt" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1390023261574" ignored="false" />
+    <file path="/LoginActivity.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1390055535874" ignored="false" />
+    <file path="/Dummy.txt" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1390054886677" ignored="false" />
     <file path="/hiderotation.xml" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1384973636206" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1385575094019" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1390059183996" ignored="false" />
     <file path="/strings.xml" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1389439940854" ignored="false" />
     <file path="/BluetoothDeviceAdapter.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1385400093410" ignored="false" />
-    <file path="/fragment.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1388754900501" ignored="false" />
+    <file path="/fragment.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1390117965521" ignored="false" />
     <file path="/bluetoothdevice.xml" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1385308340520" ignored="false" />
     <file path="/SensorDeviceSyncImpl.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1389173111966" ignored="false" />
     <file path="$PROJECT_DIR$/../../app1019/a1/src/ru/efko/dims/domain/SensorDeviceSyncImpl.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1387726580706" ignored="false" />
@@ -62,6 +67,11 @@
     <file path="/pref_headers.xml" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1390027016700" ignored="false" />
     <file path="/Preferences.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1389936666009" ignored="false" />
     <file path="/PrefParameterSetting.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1390026860026" ignored="false" />
+    <file path="/PerfParameterSettings.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1390055045953" ignored="false" />
+    <file path="/pref_parameter_headers.xml" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1390055383113" ignored="false" />
+    <file path="/PrefParameterFragment.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1390123247377" ignored="false" />
+    <file path="/pref_parameter_setting.xml" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1390059835450" ignored="false" />
+    <file path="/PrefParameterSettings.java" changelist="c11ff46e-8c80-46d0-8edf-3d95cbe8e2fb" time="1390117429016" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +86,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -144,7 +155,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -154,19 +164,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Preferences.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/login/Preferences.java">
+      <file leaf-file-name="LoginActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/login/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+            <state line="278" column="106" selection-start="12149" selection-end="12149" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrefParameterSetting.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/login/PrefParameterSetting.java">
+      <file leaf-file-name="PrefParameterFragment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/example/login/PrefParameterFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="65" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
+            <state line="72" column="57" selection-start="3156" selection-end="3156" vertical-scroll-proportion="0.5663507">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2078#2344#0" expanded="true" />
+                <element signature="e#2329#2330#0" expanded="true" />
+                <element signature="e#3443#3444#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrefParameterSettings.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/login/PrefParameterSettings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="32" selection-start="986" selection-end="986" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -174,10 +198,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pref_device_parameter_settings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/xml/pref_device_parameter_settings.xml">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="52" selection-start="283" selection-end="283" vertical-scroll-proportion="-4.76">
+            <state line="25" column="56" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -186,52 +210,7 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="36" selection-start="2985" selection-end="2985" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pref_headers.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/xml/pref_headers.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="68" selection-start="277" selection-end="277" vertical-scroll-proportion="0.10164425">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pref_parameter_setting.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/xml/pref_parameter_setting.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="1077" selection-end="1077" vertical-scroll-proportion="-15.64">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SensorDevice.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/login/SensorDevice.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="0" selection-start="3257" selection-end="3257" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SensorValueChart.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/login/chart/SensorValueChart.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="8" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GraphicsActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/login/GraphicsActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0">
+            <state line="47" column="36" selection-start="2985" selection-end="2985" vertical-scroll-proportion="-31.96">
               <folding />
             </state>
           </provider>
@@ -256,22 +235,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/example/login/SensorDeviceSyncImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/example/login/ThreadLocalVariablesKeeper.java" />
-        <option value="$PROJECT_DIR$/src/com/example/login/chart/IDemoChart.java" />
-        <option value="$PROJECT_DIR$/src/com/example/login/chart/AbstractDemoChart.java" />
-        <option value="$PROJECT_DIR$/src/com/example/login/chart/SensorValueChart.java" />
         <option value="$PROJECT_DIR$/res/layout-land/activity_main.xml" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/example/login/DeviceConnectionTask.java" />
         <option value="$PROJECT_DIR$/src/com/example/login/GraphicsActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/login/SensorDevice.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/res/xml/pref_parameter_setting.xml" />
         <option value="$PROJECT_DIR$/src/com/example/login/Preferences.java" />
         <option value="$PROJECT_DIR$/src/com/example/login/PrefParameterSetting.java" />
         <option value="$PROJECT_DIR$/res/xml/pref_device_parameter_settings.xml" />
         <option value="$PROJECT_DIR$/res/xml/pref_headers.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/login/PerfParameterSettings.java" />
+        <option value="$PROJECT_DIR$/res/xml/pref_parameter_headers.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/login/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/xml/pref_parameter_setting.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/login/PrefParameterSettings.java" />
+        <option value="$PROJECT_DIR$/src/com/example/login/PrefParameterFragment.java" />
       </list>
     </option>
   </component>
@@ -368,24 +347,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="xml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="values" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -456,11 +417,11 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -500,19 +461,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -539,6 +487,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -646,20 +607,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1362" y="-4" width="1448" height="868" extended-state="6" />
-    <editor active="true" />
+    <frame x="1362" y="-4" width="1448" height="868" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39737275" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39676112" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32793522" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -667,8 +629,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20347223" sideWeight="0.6026273" order="0" side_tool="true" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3957307" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20347223" sideWeight="0.6045884" order="0" side_tool="true" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3954116" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26180556" sideWeight="0.6720648" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -676,7 +638,6 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32793522" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -746,29 +707,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/example/login/chart/AbstractDemoChart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="61" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-land/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.43142858" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/login/ThreadLocalVariablesKeeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="30" selection-start="980" selection-end="980" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -799,20 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/login/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="0" selection-start="3574" selection-end="3574" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="36" selection-start="2985" selection-end="2985" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/login/GraphicsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="0" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0">
@@ -820,40 +747,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/xml/pref_parameter_setting.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/example/login/DeviceParametersActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="1077" selection-end="1077" vertical-scroll-proportion="-15.64">
+        <state line="11" column="13" selection-start="226" selection-end="226" vertical-scroll-proportion="0.4675">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/login/Preferences.java">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+        <state line="25" column="56" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/login/PrefParameterSetting.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/login/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="65" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
+        <state line="278" column="106" selection-start="12149" selection-end="12149" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="36" selection-start="2985" selection-end="2985" vertical-scroll-proportion="-31.96">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Android/android-sdk/sources/android-15/android/content/Context.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="28" selection-start="2152" selection-end="2152" vertical-scroll-proportion="0.33175355">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/login/PrefParameterSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="32" selection-start="986" selection-end="986" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/xml/pref_device_parameter_settings.xml">
+    <entry file="file://C:/Program Files (x86)/Android/android-sdk/sources/android-15/android/content/SharedPreferences.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="52" selection-start="283" selection-end="283" vertical-scroll-proportion="-4.76">
+        <state line="45" column="21" selection-start="1693" selection-end="1693" vertical-scroll-proportion="0.33175355">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/xml/pref_headers.xml">
+    <entry file="file://C:/Program Files (x86)/Android/android-sdk/sources/android-15/android/preference/EditTextPreference.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="68" selection-start="277" selection-end="277" vertical-scroll-proportion="0.10164425">
+        <state line="44" column="13" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.4755245">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/login/PrefParameterFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="57" selection-start="3156" selection-end="3156" vertical-scroll-proportion="0.5663507">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2078#2344#0" expanded="true" />
+            <element signature="e#2329#2330#0" expanded="true" />
+            <element signature="e#3443#3444#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

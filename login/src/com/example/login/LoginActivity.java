@@ -276,7 +276,7 @@ public class LoginActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add(Menu.NONE, 1, 0, "Настройки").setIntent(new Intent(this, Preferences.class));
+        menu.add(Menu.NONE, 1, 0, "Настройки параметров").setIntent(new Intent(this, PrefParameterSettings.class));
         return super.onCreateOptionsMenu(menu);
     }
 
